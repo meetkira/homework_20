@@ -16,8 +16,10 @@ def movie_dao():
     genre = Genre(id=1, name="test_genre")
     director = Director(id=1, name="test_director")
 
-    movie_1 = Movie(id=1, title="test movie 1", description="test movie 1", trailer="test movie 1", year=2021, rating=10, genre=genre, director=director)
-    movie_2 = Movie(id=2, title="test movie 2", description="test movie 2", trailer="test movie 2", year=2022, rating=9, genre=genre, director=director)
+    movie_1 = Movie(id=1, title="test movie 1", description="test movie 1", trailer="test movie 1", year=2021,
+                    rating=10, genre=genre, director=director)
+    movie_2 = Movie(id=2, title="test movie 2", description="test movie 2", trailer="test movie 2", year=2022, rating=9,
+                    genre=genre, director=director)
 
     movie_dao.get_one = MagicMock(return_value=movie_1)
     movie_dao.get_all = MagicMock(return_value=[movie_1, movie_2])

@@ -14,7 +14,6 @@ def genre_dao():
     genre_1 = Genre(id=1, name="test_genre_1")
     genre_2 = Genre(id=2, name="test_genre_2")
 
-
     genre_dao.get_one = MagicMock(return_value=genre_1)
     genre_dao.get_all = MagicMock(return_value=[genre_1, genre_2])
     genre_dao.create = MagicMock(return_value=Genre(id=3))
